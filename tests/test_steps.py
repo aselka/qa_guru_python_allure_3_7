@@ -8,6 +8,8 @@ from selene.support.shared.jquery_style import s
 
 def test_dinamic_steps():
     with allure.step('Открываем главную страницу'):
+        browser.config.window_height = 1920
+        browser.config.window_width = 1620
         browser.open('https://github.com/')
 
     with allure.step('Ищем репозиторий'):
@@ -38,6 +40,8 @@ def test_decorator_steps():
 
 @allure.step('Открываем главную страницу')
 def open_main_page():
+    browser.config.window_height = 1920
+    browser.config.window_width = 1620
     browser.open('https://github.com')
 
 

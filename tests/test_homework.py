@@ -14,6 +14,8 @@ from allure_commons.types import AttachmentType
 @allure.story('Авторизованный пользователь может создать задачу в репозитории, без шагов')
 @allure.link('https://github.com', name='Testing')
 def test_github():
+    browser.config.window_height = 1920
+    browser.config.window_width = 1620
     browser.open('https://github.com/')
     s('.header-search-input').click()
     s('.header-search-input').send_keys('aselka/qa_guru_python_allure_3_7')
@@ -31,6 +33,8 @@ def test_github():
 @allure.link('https://github.com', name='Testing')
 def test_dinamic_steps():
     with allure.step('Открываем главную страницу'):
+        browser.config.window_height = 1920
+        browser.config.window_width = 1620
         browser.open('https://github.com/')
 
     with allure.step('Ищем репозиторий'):
@@ -67,6 +71,8 @@ def test_decorator_steps():
 
 @allure.step('Открываем главную страницу')
 def open_main_page():
+    browser.config.window_height = 1920
+    browser.config.window_width = 1620
     browser.open('https://github.com')
 
 

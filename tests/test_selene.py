@@ -13,6 +13,8 @@ from allure_commons.types import Severity
 @allure.story('Авторизованный пользователь может создать задачу в репозитории')
 @allure.link('https://github.com', name='Testing')
 def test_github():
+    browser.config.window_height = 1920
+    browser.config.window_width = 1620
     browser.open('https://github.com/')
 
     s('.header-search-input').click()
